@@ -1,0 +1,27 @@
+﻿@page "/obdelnik3"
+
+<PageTitle>Obdelník v3</PageTitle>
+
+<h2>Obdelník v3 - bez tlačítka</h2>
+
+<div class="mb-3 mt-3">
+    <label for="stranaA" class="form-label">Zadej stranu A:</label>
+    <input type="number" class="form-control" id="stranaA" @bind-value="obdelnik.StranaA" @bind-value:event="oninput" placeholder="Zadej stranu A">
+</div>
+
+<div class="mb-3 mt-3">
+    <label for="stranaB" class="form-label">Zadej stranu B:</label>
+    <input type="number" class="form-control" id="stranaB" @bind-value="obdelnik.StranaB" @bind-value:event="oninput" placeholder="Zadej stranu B">
+</div>
+
+
+<div>
+    <h3>Výsledek:</h3>
+    <p><strong>Obvod:</strong>@($" {obdelnik.Obvod:N0}")   </p>
+    <p><strong>Obsah:</strong>@($" {obdelnik.Obsah:N0}") </p>
+    <p><strong>Uhlopříčka:</strong>@($" {obdelnik.Uhlopricka:N2}") </p>
+</div>
+
+@code {
+    private Models.Obdelnik2 obdelnik = new Models.Obdelnik2();
+}
