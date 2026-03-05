@@ -2,6 +2,15 @@
 {
 	public class Obdelnik2
 	{
+		public Obdelnik2()
+		{
+
+		}
+		public Obdelnik2(int stranaA, int stranaB)
+		{
+			StranaA = stranaA;
+			StranaB = stranaB;
+		}
 		private int stranaA;
 		private int stranaB;
 		private int NormalizujStranu(int strana) => Math.Max(0, strana);
